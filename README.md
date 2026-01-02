@@ -13,28 +13,24 @@ npm install
 Run the script to create commits:
 
 ```bash
-node run.js
+npm start
 ```
 
-This will generate commits based on your configuration in `run.js` to populate your GitHub contribution graph.
+This will generate **100 random commits** spread across the past year to populate your GitHub contribution graph.
 
 ## ⚙️ Configuration
 
-Edit the configuration variables in `run.js` to customize the commit generation:
+Edit the number of commits in `index.js`:
 
 ```javascript
-const REPO_PATH = ".";         // Path to your git repository
-const START_DATE = "2025-05-01"; // Start date (YYYY-MM-DD)
-const END_DATE = "2025-07-30";   // End date (YYYY-MM-DD)
-const TOTAL_COMMITS = 100;       // Total number of commits to generate
+makeCommits(100); // Change 100 to your desired number
 ```
 
 ## 📁 Project Structure
 
 ```
 greenway/
-├── run.js           # Entry point & Configuration
-├── index.js         # Core logic script
+├── index.js         # Main script
 ├── data.json        # Commit data file
 ├── package.json     # Dependencies
 ├── LICENSE          # MIT License
